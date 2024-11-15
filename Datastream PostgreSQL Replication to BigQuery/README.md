@@ -66,9 +66,11 @@ SELECT PG_CREATE_LOGICAL_REPLICATION_SLOT('test_replication', 'pgoutput');
 
 ## Create the Datastream resources and start replication
 1. From the search menu, type Datastream and select Datastream
+
 ![image](https://github.com/user-attachments/assets/d40af406-3322-4324-b56c-38fd8d52e84c)
 
 2. Click Enable to enable the Datastream API
+
 ![image](https://github.com/user-attachments/assets/08be8691-5aa2-4a4e-9bb7-836ec0024dfd)
 
 ![image](https://github.com/user-attachments/assets/7f0d7dff-aa6d-43fd-890d-4049084c026e)
