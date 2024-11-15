@@ -1,5 +1,6 @@
 # Loading data into BigQuery
 
+### Open the sidebar panel.
 ![image](https://github.com/user-attachments/assets/e18c25ef-4269-4504-9c21-11caec78a7c8)
 
 ![image](https://github.com/user-attachments/assets/847c6107-aa90-4e1a-85d0-a2e20b4458b7)
