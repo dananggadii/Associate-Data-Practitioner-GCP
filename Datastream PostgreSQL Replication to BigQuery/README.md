@@ -1,6 +1,13 @@
 # Datastream: PostgreSQL Replication to BigQuery
 
-## Create a database for replication
+## What you'll do
+- Prepare a Cloud SQL for PostgreSQL instance using the Google Cloud Console
+- Import data into the Cloud SQL instance
+- Create a Datastream connection profile for the PostgreSQL database
+- Create a Datastream connection profile for the BigQuery destination
+- Create a Datastream stream and start replication
+- Validate that the existing data and changes are replicated correctly into BigQuery
+
 ### Create the Cloud SQL database
 1. Run the following command to enable the Cloud SQL API:
 ```
