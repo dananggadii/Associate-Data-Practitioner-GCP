@@ -17,7 +17,7 @@ In this lab, you will:
 
 2. To create a connection, click +ADD, and then click Connections to external data sources.
 ```
-Note: If you are prompted to enable the BigQuery Connection API click Enable API.
+Note: If you are prompted to enable the BigQuery Connection API click **Enable API**.
 ```
 
 3. In the Connection type list, select Vertex AI remote models, remote functions and BigLake (Cloud Resource).
