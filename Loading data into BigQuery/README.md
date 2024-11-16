@@ -1,5 +1,10 @@
 # Loading data into BigQuery
 
+## What you'll learn
+- Loading data into BigQuery from various sources
+- Loading data into BigQuery using the CLI and Console
+- Using DDL to create tables
+
 ### 1. Open the sidebar panel.
 ![image](https://github.com/user-attachments/assets/e18c25ef-4269-4504-9c21-11caec78a7c8)
 
