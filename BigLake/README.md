@@ -15,22 +15,31 @@ In this lab, you will:
 ### Create a connection resource
 1. From the Navigation Menu, go to BigQuery > BigQuery Studio. Click Done.
 
+![image](https://github.com/user-attachments/assets/9b2af59a-ff3e-46bc-a18a-51dd111bd435)
+
 2. To create a connection, click +ADD, and then click Connections to external data sources.
 ```
 Note: If you are prompted to enable the BigQuery Connection API click Enable API.
 ```
 
+![image](https://github.com/user-attachments/assets/c13f4be2-2d90-4471-810e-50953716fcd8)
+
+![image](https://github.com/user-attachments/assets/fb6f1815-524b-4d6f-92ef-76e660090219)
+
 3. In the Connection type list, select Vertex AI remote models, remote functions and BigLake (Cloud Resource).
 
+![image](https://github.com/user-attachments/assets/c10eaa1e-6430-4ec4-a414-e308a62b8f2f)
+
 4. In the Connection ID field, enter my-connection.
-
 5. For Location type, choose **Multi-region** and select **US (multiple regions in United States)** from dropdown.
-
 6. Click **Create connection**.
 
-7. To view your connection information, select the connection in the navigation menu.
+![image](https://github.com/user-attachments/assets/a595fcf5-8cb7-4bab-9d86-130b83d88423)
 
+7. To view your connection information, select the connection in the navigation menu.
 8. In the **Connection info** section, copy the Service Account ID. You will need this in the following section.
+
+![image](https://github.com/user-attachments/assets/1a356610-9cee-4125-92c7-8bb8961f1014)
 
 ### Set up access to a Cloud Storage data lake
 1. From the Navigation Menu, go to IAM & Admin > IAM.
