@@ -45,17 +45,25 @@ Note: If you are prompted to enable the BigQuery Connection API click Enable API
 
 ### Set up access to a Cloud Storage data lake
 1. From the Navigation Menu, go to IAM & Admin > IAM.
-
 2. Click +GRANT ACCESS.
+
+![image](https://github.com/user-attachments/assets/f0a9bc12-0040-4546-aa2c-4550db48a89f)
 
 3. In the New principals field, enter the service account ID that you copied earlier.
 
-4. In the Select a role field, select Cloud Storage, and then select Storage Object Viewer.
+![image](https://github.com/user-attachments/assets/28766eca-a373-42d9-87a2-bff8cfb1220f)
 
+![image](https://github.com/user-attachments/assets/67e51e0c-b24b-42b8-bbf6-753b2b1b616a)
+
+4. In the Select a role field, select Cloud Storage, and then select Storage Object Viewer.
 5. Click Save.
 ```
 Note: After you migrate users to BigLake tables, remove direct Cloud Storage permissions from existing users. Direct file access allows users to bypass governance policies (such as row- and column-level security) set on BigLake tables.
 ```
+
+![image](https://github.com/user-attachments/assets/238ed2f1-6c8b-4a6e-b7e9-816bf28ab158)
+
+![image](https://github.com/user-attachments/assets/4127bc76-ed63-447c-a8bb-2b34bbf6fc68)
 
 ### Create a BigLake table
 #### Create a dataset
