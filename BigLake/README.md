@@ -333,4 +333,3 @@ bq update --external_table_definition=/tmp/tabledef.json --schema=/tmp/schema de
 
 ![image](https://github.com/user-attachments/assets/b831c7e5-dbe3-40a1-9ca4-e9d8d6e179e4)
 
-## Great! You successfully upgraded the existing external table to a BigLake table by associating it to a cloud resource connection.
