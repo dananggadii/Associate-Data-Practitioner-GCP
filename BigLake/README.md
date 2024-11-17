@@ -12,6 +12,8 @@ In this lab, you will:
 - Set up access control policies.
 - Upgrade external tables to BigLake tables.
 
+##
+
 ### Create a connection resource
 1. From the Navigation Menu, go to BigQuery > BigQuery Studio. Click Done.
 
