@@ -18,6 +18,8 @@ timestamp:timestamp,meter_reading:float,meter_increment:float,ride_status:string
 passenger_count:integer -t taxirides.realtime
 ```
 
+![alt text](image.png)
+
 ### Copy required lab artifacts
 
 1. In Cloud Shell, run the following commands to move files needed for the Dataflow job.
@@ -27,6 +29,8 @@ gcloud storage cp gs://cloud-training/bdml/taxisrcdata/schema.json  gs://Project
 gcloud storage cp gs://cloud-training/bdml/taxisrcdata/transform.js  gs://Project_ID-bucket/tmp/transform.js
 gcloud storage cp gs://cloud-training/bdml/taxisrcdata/rt_taxidata.csv  gs://Project_ID-bucket/tmp/rt_taxidata.csv
 ```
+
+![alt text](image-1.png)
 
 ### Set up a Dataflow Pipeline
 
@@ -39,11 +43,15 @@ gcloud services disable dataflow.googleapis.com
 gcloud services enable dataflow.googleapis.com
 ```
 
+![alt text](image-2.png)
+
 #### Create a new streaming pipeline:
 
 1. In the Cloud console, in the Navigation menu (Navigation Menu), click Dataflow.
 
 2. In the top menu bar, click Create Job From Template.
+
+![alt text](image-3.png)
 
 3. Type streaming-taxi-pipeline as the Job name for your Dataflow job.
 
@@ -54,6 +62,10 @@ Region
 ```
 
 5. In Dataflow template, select the Cloud Storage Text to Bigquery (Stream) template under Process Data Continuously (stream).
+
+![alt text](image-5.png)
+
+![alt text](image-4.png)
 
 > **Note**: Make sure to select the template option which matches with the parameters listed below.
 
@@ -95,11 +107,15 @@ transform
 Project_ID-bucket/tmp
 ```
 
+![alt text](image-6.png)
+
 12. Click Optional Parameters.
 
 13. In Max workers, type 2
 
 14. In Number of workers, type 1
+
+![alt text](image-7.png)
 
 15. Uncheck Use default machine type.
 
@@ -108,11 +124,15 @@ Project_ID-bucket/tmp
 > Series: E2 \
 > Machine type: e2-medium (2 vCPU, 4 GB memory)
 
+![alt text](image-8.png)
+
 17. Click Run Job.
 
 > A new streaming job has started! You can now see a visual representation of the data pipeline. It will take 3 to 5 minutes for data to begin moving into BigQuery.
 
 > Note: If the dataflow job fails for the first time then re-create a new job template with new job name and run the job.
+
+![alt text](image-9.png)
 
 ### Analyze the taxi data using BigQuery
 
@@ -129,6 +149,8 @@ SELECT * FROM taxirides.realtime LIMIT 10
 > **Note**: If no records are returned, wait another minute and re-run the above query (Dataflow takes 3-5 minutes to setup the stream).
 
 Your output will look similar to the following:
+
+![alt text](image-10.png)
 
 ### Perform aggregations on the stream for reporting
 
@@ -176,7 +198,9 @@ The result shows key metrics by the minute for every taxi drop-off.
 
 4. In the Save query dialog, in the Name field, type My Saved Query.
 
-5. Click Save.'
+5. Click Save.
+
+![alt text](image-11.png)
 
 ### Stop the Dataflow Job
 
@@ -185,6 +209,8 @@ The result shows key metrics by the minute for every taxi drop-off.
 2. Click the streaming-taxi-pipeline, or the new job name.
 
 3. Click Stop, and then select Cancel > Stop Job.
+
+![alt text](image-13.png)
 
 ### Create a real-time dashboard
 
@@ -225,6 +251,8 @@ Your query is loaded in to the query editor.
 16. In Setup > Sort, click Ascending.
 
 Your chart should look similar to this:
+
+![alt text](image-14.png)
 
 > **Note**: Visualizing data at a minute-level granularity is currently not supported in Looker Studio as a timestamp. This is why we created our own dashboard_sort dimension.
 
