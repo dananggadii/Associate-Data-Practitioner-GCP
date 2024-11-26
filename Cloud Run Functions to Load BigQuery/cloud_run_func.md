@@ -155,9 +155,6 @@ bq query \
 
 > **Note**: The Cloud Run function will typically process very quickly but it is possible the query run against BigQuery may not return results. If that is the case for you please wait a moment and run the query again.
 
-2. The query should return results similiar to the following:
-   Example output:
-
 ### View logs
 
 1. To check the logs and see your messages in the log history run the following command in the SSH terminal.
@@ -165,5 +162,3 @@ bq query \
 ```bash
 gcloud functions logs read loadBigQueryFromAvro
 ```
-
-2. Messages in the log appear similar to the following:
