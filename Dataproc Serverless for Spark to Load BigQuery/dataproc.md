@@ -26,6 +26,8 @@ gsutil mb -p  PROJECT_ID gs://PROJECT_ID-bqtemp
 bq mk -d  loadavro
 ```
 
+![alt text](image.png)
+
 ### Download lab assets
 
 1. From the Navigation menu click on Compute Engine. Here you'll see a linux VM provisioned for you. Click the SSH button next to the lab-vm instance.
@@ -60,6 +62,8 @@ unzip dataproc-templates.zip
 cd dataproc-templates/python
 ```
 
+![alt text](image-1.png)
+
 ### Configure and execute the Spark code
 
 1. Set the following environment variables for the Dataproc Serverless environment.
@@ -82,8 +86,12 @@ export JARS=gs://cloud-training/dataengineering/lab_assets/idegc/spark-bigquery_
     --gcs.bigquery.output.dataset="loadavro" \
     --gcs.bigquery.output.table="campaigns" \
     --gcs.bigquery.output.mode=overwrite\
-    --gcs.bigquery.temp.bucket.name="PROJECT_ID-bqtemp"
+    --gcs.bigquery.temp.bucket.name="PROJECT_ID-bqtemp" \
+    --dataproc.serverless.worker-config.num-instances=1 \
+    --dataproc.serverless.worker-config.machine-type="n1-standard-1"
 ```
+
+![alt text](image-2.png)
 
 > **Note**: You may safely ignore any warning stating: **WARN FileStreamSink: Assume no metadata directory. Error while looking for metadata directory in the path...** Because this is a small test, a metadata directory is not required.
 
@@ -99,3 +107,5 @@ bq query \
 
 2. The query should return results similiar to the following:
    Example output:
+
+![alt text](image-3.png)
